@@ -11,4 +11,4 @@ Modified the functionality of both client and server.
 1. As it was mentioned earlier the server has a collection of files in its folder.  Client send a request as string to the server the request will of the format 
 2. GET <filename>  and server will respond to the request by sending the contents of the file back to the client as another string.
 3. Eg  Client send GET marks.txt  then the server will respond back with contents of the file.
-4. In case if the client send a filename which does not exist in server, the  server will respond with the string "Doesn't exist."
+4. In case if the client send a filename which does not exist in server, the  server will respond with the string "Doesn't exist." 
