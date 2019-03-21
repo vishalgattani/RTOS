@@ -22,6 +22,7 @@ First run the simulator to generate the 5 sensor files with values
 $ python simulator.py 
 
 $./server
+
 $./client 0.0.0.0 
 
 Results are stored in a results.txt (comma-seperated-values)
