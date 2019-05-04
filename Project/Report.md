@@ -80,6 +80,9 @@ The entire state diagram can be shown as follows:
 ## Cases
 We have divided the pathway into two sections namely, left and right, to accomodate for errors as the sensors on the left shouldn't interfere with those on the right and vice-versa. 
 
+![Document 1](https://user-images.githubusercontent.com/24211929/57180052-587f3600-6ea2-11e9-952c-153f81b20a02.png)
+
+
 So the cases we have considered where a person can be detected to enter or exit are as follows:
 
 - A person entering/exiting from left/right will be counted.
