@@ -31,6 +31,9 @@ The components used in the project are as follows:
 ## Circuit Diagram 
 
 
+![occup-1](https://user-images.githubusercontent.com/24211929/57179697-1a801300-6e9e-11e9-9fbf-2b21b5581d36.jpg)
+[Circuit Diagram.pdf](https://github.com/vishalgattani/RTOS/files/3144412/Circuit.Diagram.pdf)
+
 
 ## Circuit Analysis
 
@@ -75,8 +78,22 @@ The entire state diagram can be shown as follows:
 
 
 ## Cases
+We have divided the pathway into two sections namely, left and right, to accomodate for errors as the sensors on the left shouldn't interfere with those on the right and vice-versa. 
+
+So the cases we have considered where a person can be detected to enter or exit are as follows:
+
+- A person entering/exiting from left/right will be counted.
+- Two people simultaneously walking in from either directions of entry/exit will be taken into consideration.
+- A person walking halfway through and then exiting his motion only to revert back and not enter/exit will not be taken into consideration as he/she hasn't completed his motion through the pathway.
+- Cases where three people are entering/exiting at a time hasn't been taken into consideration based on the assumption that the pathway can only accommodate two people at a time.
+
+
 
 ## Error logs
+The following cases are error prone when detecting an entry/exit.
+- A person walking exactly through the midway of the pathway, either both or neither both the left and right sections may detect the person. The former will result in a count of +2 and the latter will result in no addition to the count of persons that have entered/exited.
+- A person walking diagonally will trigger the first(front) sensor of either left/right section and then trigger the second(behind) sensor resulting in the state diagram getting changes only in the intermediate stages and it will not be effecting the count.
+
 
 ## RTOS Applications
 
