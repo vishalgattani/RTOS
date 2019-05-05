@@ -100,6 +100,13 @@ The following cases are error prone when detecting an entry/exit.
 
 ## RTOS Applications
 
+## IPC using Sockets 
+Our multiple client nodes are connected to the server using sockets, which are used to relay data information to the server
+where it is collated to obtained the occupancy data of the desired room.
+
+
+## File Locking
+We have used multiple processed for different tasks like sensors reading , client send operation and so on which operate on one common file, so to avoid race condition among these processes we have used file locking in C and python.
 ## Conclusion
 
 
