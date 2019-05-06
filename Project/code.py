@@ -414,7 +414,7 @@ try:
 					if e.errno != errno.EAGAIN:
 						raise
 					else:
-						time.slepp(0.1)
+						time.sleep(0.1)
 			f.close()
 
 		time.sleep(0.01)
