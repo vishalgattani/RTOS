@@ -107,7 +107,12 @@ where it is collated to obtained the occupancy data of the desired room.
 
 ## File Locking
 We have used multiple processed for different tasks like sensors reading , client send operation and so on which operate on one common file, so to avoid race condition among these processes we have used file locking in C and python.
+
 ## Conclusion
+We have simulated a scenario where we have one pathway deployed and another pathway is just simulator to help visualize multiple entry exit points. So each client (*ClientA* (code.py) and *ClientB* (simulator.py)) are two pathways where one is just inputting a count value to a file by either adding or subtracting 1 or by doing nothing. 
+
+The two files (code.py and simulator.py) are writing into a file by using appropriate file locking mechanisms to ensure they both do not write into the file at the same instances. The two client codes read the value from the file and send it to the server which displays the count values as detected by both the clients and prints them by showing the **<count_from_path1> <count_from_path2>**.
+
 
 
 
